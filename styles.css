@@ -32,7 +32,7 @@ main {
 	list-style: none;
 }
 
-#menubar.li{
+#menubar>li{
 	float: left;
 }
 
