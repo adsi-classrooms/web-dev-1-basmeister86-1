@@ -27,7 +27,7 @@ main {
 	right: 10px;
 }
 
-#menubar
+#menubar,
 #menubar ul{
 	list-style: none;
 }
