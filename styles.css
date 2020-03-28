@@ -1,51 +1,45 @@
-*{
-	box-sizing: border-box;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-.item1 { grid-area: header; }
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
-.item4 { grid-area: right; }
-.item5 { grid-area: footer; }
-
-.grid-container {
-	display: grid;
-	grid-template-areas:
-	  'header header header header header header'
-	  'menu main main main right right'
-	  'menu footer footer footer footer footer';
-	grid-gap: 10px;
-	background-color: #2196F3;
-	padding: 10px;
-  }
-  
-  .grid-container > div {
-	background-color: rgba(255, 255, 255, 0.8);
-	text-align: center;
-	padding: 20px 0;
-	font-size: 30px;
-  }
-
 body {
+	line-height: 1.6;
+
+	display: grid;
+	grid-template:
+	  "header header menu menu" 5em
+	  "banner banner banner banner" 30vh
+	  ". main main." auto
+	  "footer footer footer footer" 10em
+	/ 1fr minmax(30em, 5fr) minmax(30em, 5fr) 1fr;
+	grid-column-gap: 0em;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
-	color: white;
-	background-color: #1b2631;
-	padding: 5px;
+	grid-area: header;
+	padding-left: 20px;
+	background-color: #0062b2;
+	color: #ffffff;
 }
 
-.intro-img {
-	width: 200px;
-	margin-top: 10px;
-	margin-bottom: 20px;
+.banner {
+	grid-area: banner;
+	background: url(banner.jpg);
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
 }
 
-menu {
-	margin-top: 5px;
+.banner-title{
+	  color: #bbd658;
+	  margin: 0;
+}
+
+.menu {
+	grid-area: menu;
+	background-color: #0062b2;
+	
 }
 
 #menubar,
@@ -54,26 +48,28 @@ menu {
 }
 
 #menubar>li{
-	float: left;
+	margin-top: 33px;
+	float: right;
 	overflow: hidden;
 }
 
 #menubar li a{
 	display: block;
 	height: 30px;
-	width: 120px;
-	text-align: left;
+	width: 200px;
+	text-align: center;
+	font-size: 20px;
 	text-decoration: none;
 }
 
 #menubar>li>a{
-	background-color: #1b2631;
+	background-color: #0062b2;
 	color: #fff;
 }
 
 #linklist{
 	position: absolute;
-	background-color: #efefef;
+	background-color: #fadd00;
 	text-align: left;
 	z-index: 9999;
 	display: none;
@@ -81,18 +77,25 @@ menu {
 
 #linklist>li>a{
 	color: #121;
-	width: auto;
+	width: 275px;
+	text-align: left;
 }
 
 #menubar li a:hover{
-	background-color: #bbd658;
+	background-color:#fadd00;
 	color: #fff;
 }
 
 #menubar li:hover #linklist{
 	display: block;
+	background-color:#fadd00;
+	text-align: left;
 }
 
 main {
-	padding: 100px;
+	grid-area: main;
 }
+
+footer {
+	grid-area: footer;
+  }
