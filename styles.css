@@ -1,8 +1,29 @@
 *{
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-areas:
+	  'header header header header header header'
+	  'menu main main main right right'
+	  'menu footer footer footer footer footer';
+	grid-gap: 10px;
+	background-color: #2196F3;
+	padding: 10px;
+  }
+  
+  .grid-container > div {
+	background-color: rgba(255, 255, 255, 0.8);
+	text-align: center;
+	padding: 20px 0;
+	font-size: 30px;
+  }
+  
+body {
 	margin: 0;
-	padding: 0;
-	font-family: Arial;
-	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -11,20 +32,14 @@ header {
 	padding: 5px;
 }
 
-main {
-	padding: 100px;
-}
-
 .intro-img {
 	width: 200px;
 	margin-top: 10px;
 	margin-bottom: 20px;
 }
 
-#temp {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+menu {
+	margin-top: 5px;
 }
 
 #menubar,
@@ -34,24 +49,26 @@ main {
 
 #menubar>li{
 	float: left;
+	overflow: hidden;
 }
 
 #menubar li a{
 	display: block;
-	height: 20px;
-	width: 110;
-	padding: 10px;
+	height: 30px;
+	width: 120px;
+	text-align: left;
 	text-decoration: none;
 }
 
 #menubar>li>a{
-	background-color: #6494ed;
+	background-color: #1b2631;
 	color: #fff;
 }
 
 #linklist{
 	position: absolute;
 	background-color: #efefef;
+	text-align: left;
 	z-index: 9999;
 	display: none;
 }
@@ -62,10 +79,14 @@ main {
 }
 
 #menubar li a:hover{
-	background-color: #5884d6;
+	background-color: #bbd658;
 	color: #fff;
 }
 
 #menubar li:hover #linklist{
 	display: block;
+}
+
+main {
+	padding: 100px;
 }
