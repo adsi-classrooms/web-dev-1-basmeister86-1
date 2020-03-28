@@ -22,7 +22,7 @@ header {
 
 .banner {
 	grid-area: banner;
-	background: url(banner.jpg);
+	background: url(https://github.com/adsi-classrooms/web-dev-1-basmeister86-1/blob/master/banner.jpg?raw=true);
 	background-position: center;
 	display: flex;
 	flex-direction: column;
@@ -79,17 +79,20 @@ header {
 	color: #121;
 	width: 275px;
 	text-align: left;
+	color: #fff;
 }
 
 #menubar li a:hover{
 	background-color:#fadd00;
 	color: #fff;
+	color: #fff;
 }
 
 #menubar li:hover #linklist{
 	display: block;
-	background-color:#fadd00;
+	background-color: #0062b2;
 	text-align: left;
+	color: #fff;
 }
 
 main {
