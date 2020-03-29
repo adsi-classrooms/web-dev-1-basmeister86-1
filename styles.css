@@ -1,25 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu&display=swap");
+
 body {
 	line-height: 1.6;
 
 	display: grid;
 	grid-template:
-	  "header header menu menu" 5em
-	  "banner banner banner banner" 30vh
-	  ". main main." auto
-	  "footer footer footer footer" 10em
-	/ 1fr minmax(30em, 5fr) minmax(30em, 5fr) 1fr;
+	  "header header menu menu menu" 5em
+	  "banner banner banner banner banner" 30vh
+	  "main main main sidebar ." auto
+	  "footer footer footer footer footer" 5em
+	/ 1fr minmax(30em, 5fr) 30em 30em 1fr;
 	grid-column-gap: 0em;
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+
 header {
 	grid-area: header;
+	font-family: 'Ubuntu', sans-serif;
 	padding-left: 20px;
 	background-color: #0062b2;
 	color: #ffffff;
 }
-
+.leeg {
+	grid-area: leeg;
+	background-color: #0062b2;
+}
 .banner {
 	grid-area: banner;
 	background: url(https://github.com/adsi-classrooms/web-dev-1-basmeister86-1/blob/master/banner.jpg?raw=true);
@@ -28,7 +35,6 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-
 }
 
 .banner-title{
@@ -38,8 +44,8 @@ header {
 
 .menu {
 	grid-area: menu;
+	font-family: 'Open Sans', sans-serif;
 	background-color: #0062b2;
-	
 }
 
 #menubar,
@@ -97,8 +103,22 @@ header {
 
 main {
 	grid-area: main;
+	font-family: 'Open Sans', sans-serif;
+	padding: 2em;
+}
+
+aside {
+	grid-area: sidebar;
+	font-family: 'Open Sans', sans-serif;
+	background-color: #fadd00;
+	padding: 2em;
 }
 
 footer {
 	grid-area: footer;
-  }
+	text-align: center;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
