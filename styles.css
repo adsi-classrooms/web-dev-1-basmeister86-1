@@ -1,32 +1,30 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:300&display=swap");
 
 body {
 	line-height: 1.6;
-
+	height: 100%;
+	min-height: 100vh;
 	display: grid;
 	grid-template:
-	  "header header menu menu menu" 5em
+	  "header header menu menu menu" 3em
 	  "banner banner banner banner banner" 30vh
 	  "main main main sidebar ." auto
-	  "footer footer footer footer footer" 5em
-	/ 1fr minmax(30em, 5fr) 30em 30em 1fr;
+	  "footer footer footer footer footer" 3em
+	/ 2fr minmax(30em, 5fr) 30em 30em 1fr;
 	grid-column-gap: 0em;
 	margin: 0;
-	font-family: Arial, Helvetica, sans-serif;
 }
-
 
 header {
 	grid-area: header;
-	font-family: 'Ubuntu', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-size: 30px;
+	padding-top: 5px;
 	padding-left: 20px;
 	background-color: #0062b2;
 	color: #ffffff;
 }
-.leeg {
-	grid-area: leeg;
-	background-color: #0062b2;
-}
+
 .banner {
 	grid-area: banner;
 	background: url(https://github.com/adsi-classrooms/web-dev-1-basmeister86-1/blob/master/banner.jpg?raw=true);
@@ -44,7 +42,7 @@ header {
 
 .menu {
 	grid-area: menu;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	background-color: #0062b2;
 }
 
@@ -54,13 +52,13 @@ header {
 }
 
 #menubar>li{
-	margin-top: 33px;
 	float: right;
 	overflow: hidden;
 }
 
 #menubar li a{
 	display: block;
+	padding-left: 30px;
 	height: 30px;
 	width: 200px;
 	text-align: center;
@@ -112,10 +110,13 @@ aside {
 	font-family: 'Open Sans', sans-serif;
 	background-color: #fadd00;
 	padding: 2em;
+	border: 1;
 }
 
 footer {
 	grid-area: footer;
+	background-color: #0062b2;
+	font-family: 'Open Sans', sans-serif;
 	text-align: center;
 	flex-direction: column;
 	align-items: center;
