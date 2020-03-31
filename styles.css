@@ -124,3 +124,16 @@ footer {
 	position: relative;
 	color: #ffffff;
 }
+
+a:link {
+	color: red;
+}
+  
+a:visited {
+	color: red;
+}
+  
+a:active {
+	color: red;
+}
+  
